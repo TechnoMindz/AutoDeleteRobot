@@ -856,7 +856,7 @@ async def auto_filter(client, msg, spoll=False):
         except Exception as e:
             logger.exception(e)
             ravi = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(DELETE_TIME)
+            await asyncio.sleep(120)
             await ravi.delete()
             await client.send_video(
                 chat_id=message.chat.id,
@@ -867,7 +867,7 @@ async def auto_filter(client, msg, spoll=False):
         except Exception as e:
             logger.exception(e)
             ravin = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(DELETE_TIME)
+            await asyncio.sleep(120)
             await ravin.delete()
             await client.send_video(
                 chat_id=message.chat.id,
@@ -877,7 +877,7 @@ async def auto_filter(client, msg, spoll=False):
             )
     else:
         ravina = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(DELETE_TIME)
+        await asyncio.sleep(120)
         await ravina.delete()
         await client.send_video(
             chat_id=message.chat.id,
