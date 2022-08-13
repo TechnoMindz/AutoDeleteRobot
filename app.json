@@ -27,7 +27,7 @@
         "BOT_USERNAME": {
             "description": "enter Bot Username Without @",
             "required": true,
-            "value": "TmOfficialRobot"
+            "value": "lRobot"
         },
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
@@ -103,6 +103,11 @@
             "value": "Telegram_files_technomindz",
             "required": false
         },
+        "DELETE_TIME": {
+            "description": "Set Autodelete time in seconds @TmMainChannel",
+            "value": "300"
+            "required": true
+        },
         "CACHE_TIME": {
             "description": "The maximum amount of time in seconds that the result of the inline query may be cached on the server",
             "value": "300",
@@ -122,11 +127,6 @@
             "description": "Customize Result Buttons to Callback or Url by (True = url / False = callback)",
             "required": false,
             "value": "False"
-        },
-        "DELETE_TIME": {
-            "description": "Set Autodelete time in seconds @TmMainChannel",
-            "value": "300"
-            "required": true
         }
     },
     "addons": [],
