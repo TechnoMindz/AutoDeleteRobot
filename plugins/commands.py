@@ -60,8 +60,8 @@ async def start(client, message):
             InlineKeyboardButton('✅ SUBSCᏒIBΞ  ✅', url='https://www.youtube.com/c/TechnoMindz')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
+        await message.reply_video(#change to photo if you need pics instead of video
+            video=random.choice(PICS),#Change to photo if you need pic instead of video
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
@@ -117,8 +117,8 @@ async def start(client, message):
             InlineKeyboardButton('✗ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✗' , callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
+        await message.reply_video(#Change to photo if you need pic instead of video
+            video=random.choice(PICS),#Change to photo if you need pic instead of video
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
