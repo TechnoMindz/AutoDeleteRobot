@@ -157,21 +157,25 @@ async def start(client, message):
             if f_caption is None:
                 f_caption = f"{title}"
             try:
-                await client.send_cached_media(
+                ravi = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
+                await asyncio.sleep(14400)#Time Limit Which Deletes Files Which Sent by bot
+                await ravi.delete()
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
-                await client.send_cached_media(
+                techno = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
+                await asyncio.sleep(14400)#Time Limit Which Deletes Files Which Sent by bot default it is 5hrs
+                await techno.delete()
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
@@ -260,12 +264,14 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
-    await client.send_cached_media(
+    technomindz = await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
+    await asyncio.sleep(14400)#Time Limit Which Deletes Files Which Sent by bot Default 5hrs
+    await techmomindz.delete()
                     
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
