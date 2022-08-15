@@ -6,6 +6,10 @@
 
 <p align="center"><a href="https://t.me/technomindzchat"><img src="https://telegra.ph/file/b417bdd01331179d5787c.jpg" width="500"></a></p>
 
+# Why Techno MinzRepo Usage
+
+## We have implemented autodelete scheme for bot as well as it supports 2GB+ Files and also deltes files which bot sent to users in 5Hours To Avoid Bot Copyrights
+
 # Introduction
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+Techno+Mindz!;Created+by+RAVINANDAN!;A+Powerfull+Bot+with+many+Features!;A+Advanced+AutoFilter+Bot;Don't+Forget+To+Subcribe;Techno+Mindz+in+YouTube;)
