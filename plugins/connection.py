@@ -1,4 +1,3 @@
-# Kanged From https://github.com/TechnoMindz/CommonBot_For_All
 from pyrogram import filters, Client, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.connections_mdb import add_connection, all_connections, if_active, delete_connection
@@ -61,7 +60,7 @@ async def addconnection(client, message):
                     quote=True,
                     parse_mode=enums.ParseMode.MARKDOWN
                 )
-                if chat_type in ["group", "supergroup"]:
+                if chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
                     await client.send_message(
                         userid,
                         f"Connected to **{title}** !",
