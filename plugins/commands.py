@@ -163,12 +163,12 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot
+                await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot
                 await ravi.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
                             video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
-                            caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
+                            caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\n\nDidn't Forward To Anyone ?\n\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
                             reply_to_message_id=message.id
                         )
                 
@@ -181,12 +181,12 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot default it is 5hrs
+                await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot default it is 5hrs
                 await techno.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
                             video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
-                            caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
+                            caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\n\nDidn't Forward To Anyone ?\n\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
                             reply_to_message_id=message.id
                         )
             except Exception as e:
@@ -283,12 +283,12 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-    await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot Default 5hrs
+    await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot Default 5hrs
     await technomindz.delete()
     await client.send_video(
                 chat_id=message.chat.id,
                 video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
-                caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
+                caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\n\nDidn't Forward To Anyone ?\n\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
                 reply_to_message_id=message.id
             )
     
