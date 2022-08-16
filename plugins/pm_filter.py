@@ -376,12 +376,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
-                await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot
+                await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot
                 await tm1.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
                             video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
-                            caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
+                            caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\n\nDidn't Forward To Anyone ?\n\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
                             reply_to_message_id=message.id
                         )
         except UserIsBlocked:
