@@ -273,7 +273,7 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         )
     await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot Default 5hrs
-    await techmomindz.delete()
+    await technomindz.delete()
     
     
 
