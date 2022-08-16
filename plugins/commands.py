@@ -163,7 +163,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await asyncio.sleep(14400)#Time Limit Which Deletes Files Which Sent by bot
+                await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot
                 await ravi.delete()
                 
             except FloodWait as e:
@@ -175,7 +175,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await asyncio.sleep(14400)#Time Limit Which Deletes Files Which Sent by bot default it is 5hrs
+                await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot default it is 5hrs
                 await techno.delete()
                 
             except Exception as e:
@@ -272,7 +272,7 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-    await asyncio.sleep(14400)#Time Limit Which Deletes Files Which Sent by bot Default 5hrs
+    await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot Default 5hrs
     await techmomindz.delete()
     
     
