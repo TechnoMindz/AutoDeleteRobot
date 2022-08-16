@@ -165,6 +165,12 @@ async def start(client, message):
                     )
                 await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot
                 await ravi.delete()
+                await client.send_video(
+                            chat_id=message.chat.id,
+                            video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
+                            caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
+                            reply_to_message_id=message.id
+                        )
                 
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -177,7 +183,12 @@ async def start(client, message):
                     )
                 await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot default it is 5hrs
                 await techno.delete()
-                
+                await client.send_video(
+                            chat_id=message.chat.id,
+                            video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
+                            caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
+                            reply_to_message_id=message.id
+                        )
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
@@ -273,8 +284,13 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         )
     await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot Default 5hrs
-    await techmomindz.delete()
-    
+    await technomindz.delete()
+    await client.send_video(
+                chat_id=message.chat.id,
+                video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
+                caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
+                reply_to_message_id=message.id
+            )
     
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))

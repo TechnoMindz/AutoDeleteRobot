@@ -369,13 +369,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
             else:
-                await client.send_cached_media(
+                tm1 = await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
+                await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot
+                await tm1.delete()
+                await client.send_video(
+                            chat_id=message.chat.id,
+                            video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
+                            caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
+                            reply_to_message_id=message.id
+                        )
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn 😑!', show_alert=True)
         except PeerIdInvalid:
@@ -864,7 +872,7 @@ async def auto_filter(client, msg, spoll=False):
     await client.send_video(
                 chat_id=message.chat.id,
                 video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
-                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
+                caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
                 reply_to_message_id=message.id
             )
     
