@@ -103,10 +103,18 @@ async def next_page(bot, query):
         btn.append(
             [
                 InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"🗓 {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
-            ],
-        )
+                InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
+                InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")]
+            )
+    btn.insert(0,
+            [
+                InlineKeyboardButton("𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀", url="https://t.me/technomoviesCollection"),
+                InlineKeyboardButton("彡[ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡", url="https://t.me/TMmainchannel")
+            ])
+
+    btn.insert(0, [
+        InlineKeyboardButton("🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖", url="https://t.me/tmmainchannel/4")
+    ])
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -815,10 +823,18 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
+            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages"),
+             InlineKeyboardButton(text="Chatting", url="https://t.me/technomindzchat")]
         )
+
+    btn.insert(0, [
+        InlineKeyboardButton("𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀", url="https://t.me/technomoviescollection"),
+        InlineKeyboardButton("彡ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡", url="https://t.me/tmmainchannel")
+    ])
+    btn.insert(0, [
+        InlineKeyboardButton("🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖", url="https://t.me/tmmainchannel/4")
+    ])
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
-    TEMPLATE = settings['template']
     if imdb:
         cap = TEMPLATE.format(
             query=search,
@@ -872,7 +888,7 @@ async def auto_filter(client, msg, spoll=False):
     await client.send_video(
                 chat_id=message.chat.id,
                 video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
-                caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
+                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
                 reply_to_message_id=message.id
             )
     
