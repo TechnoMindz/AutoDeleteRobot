@@ -163,7 +163,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot
+                await asyncio.sleep(7200)#Time Limit Which Deletes Files Which Sent by bot default 2 hrs
                 await ravi.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
@@ -181,7 +181,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot default it is 5hrs
+                await asyncio.sleep(7200)#Time Limit Which Deletes Files Which Sent by bot default it is 2hrs
                 await techno.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
@@ -283,7 +283,7 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-    await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot Default 5hrs
+    await asyncio.sleep(7200)#Time Limit Which Deletes Files Which Sent by bot Default 2hrs
     await technomindz.delete()
     await client.send_video(
                 chat_id=message.chat.id,
