@@ -107,6 +107,15 @@ async def next_page(bot, query):
                 InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
+    btn.insert(0,
+            [
+                InlineKeyboardButton("𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀", url="https://t.me/technomoviesCollection"),
+                InlineKeyboardButton("彡[ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡", url="https://t.me/TMmainchannel")
+            ])
+
+    btn.insert(0, [
+        InlineKeyboardButton("🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖", url="https://t.me/tmmainchannel/4")
+    ])
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -376,12 +385,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
-                await asyncio.sleep(30)#Time Limit Which Deletes Files Which Sent by bot
+                await asyncio.sleep(7200)#Time Limit Which Deletes Files Which Sent by bot default 2 hrs
                 await tm1.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
                             video="https://telegra.ph/file/7c13fa72f06ba3ab61371.mp4",
-                            caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
+                            caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\n\nDidn't Forward To Anyone ?\n\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
                             reply_to_message_id=message.id
                         )
         except UserIsBlocked:
@@ -815,8 +824,17 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
+            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages"),
+             InlineKeyboardButton(text="Chatting", url="https://t.me/technomindzchat")]
         )
+
+    btn.insert(0, [
+        InlineKeyboardButton("𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀", url="https://t.me/technomoviescollection"),
+        InlineKeyboardButton("彡ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡", url="https://t.me/tmmainchannel")
+    ])
+    btn.insert(0, [
+        InlineKeyboardButton("🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖", url="https://t.me/tmmainchannel/4")
+    ])
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
@@ -872,7 +890,7 @@ async def auto_filter(client, msg, spoll=False):
     await client.send_video(
                 chat_id=message.chat.id,
                 video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
-                caption=f"⚙️ <strong>Oh Oh The File Is Deleted</strong> 🗑️\nDidn't Forward To Anyone ?\nNo Problem Just Ask Again Here @TechnoMoviesCollection\n\n@TmMainChannel",
+                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
                 reply_to_message_id=message.id
             )
     
