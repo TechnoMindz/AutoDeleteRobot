@@ -384,7 +384,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
-                await asyncio.sleep(18000)#Time Limit Which Deletes Files Which Sent by bot
+                await asyncio.sleep(7200)#Time Limit Which Deletes Files Which Sent by bot default 2 hrs
                 await tm1.delete()
                 await client.send_video(
                             chat_id=message.chat.id,
