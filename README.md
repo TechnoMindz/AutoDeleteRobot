@@ -31,16 +31,16 @@
 ## After Forking Before Deplying Change The link of your github HERE Below Shown In The Picture 👇👇👇
 <p align="center"><a href="https://t.me/technomindzchat"><img src="https://telegra.ph/file/7dfbf86b1da43cc40208f.jpg" width="800"></a></p>
 
-<details><summary>Deploy To Heroku</summary>
-<p>
-<br>
+# Deploy To Heroku
+
 <a href="https://heroku.com/deploy?template=https://github.com/TechnoMindz/AutoDeleteRobot">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-</a>
-</p>
-</details>
 
-  
+
+# Deploy to railway 
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/9RfeHF?referralCode=dsdSeQ)
+
 ### Required Variables
   
 * `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
