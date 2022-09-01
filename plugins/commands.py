@@ -407,6 +407,12 @@ async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
     await message.answer('🗑️Trashed...')
     await message.message.edit('Succesfully Deleted All The Indexed Files 😉')
+  
+@Client.on_message(filters.private & filters.text & ~filters.regex("^/"))
+async def msg_handler(c, m):
+    await m.reply_text(
+        "𓂀 𝕄𝕪 𝕤𝕖𝕣𝕧𝕚𝕔𝕖 𝕀𝕤 𝕊𝕥𝕠𝕡𝕡𝕖𝕕 𝕋𝕙𝕒𝕟𝕜𝕤 𝔽𝕠𝕣 ℝ𝕖𝕞𝕖𝕞𝕓𝕖𝕣𝕚𝕟𝕘 𝕄𝕖 ❤️‍🔥 𓂀\n𝐈𝐟 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐜𝐡𝐢𝐭 𝐜𝐡𝐚𝐭 𝐨𝐫 𝐫𝐞𝐩𝐨𝐫𝐭 𝐚𝐧𝐲 𝐛𝐮𝐠𝐬 𝐲𝐨𝐮 𝐚𝐫𝐞 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐜𝐡𝐚𝐭 𝐡𝐞𝐫𝐞 👉@TechnoMindzChat\n\n𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐘𝐨𝐮𝐫 𝐂𝐨𝐨𝐩𝐞𝐫𝐚𝐭𝐢𝐨𝐧✨\n\n♥️ 𝗧𝗲𝗮𝗺 ➜ @TmMainChannel"
+    )
 
 
 @Client.on_message(filters.command('settings'))
