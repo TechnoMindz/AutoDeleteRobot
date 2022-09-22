@@ -609,8 +609,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         v=await a.edit('▣▣▣▣▢▢')
         i=await v.edit('▣▣▣▣▣▢')
         n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
         
-        (1)
         await n.delete()
         await query.answer("Check My Connections Mondule...")
         reply_markup = InlineKeyboardMarkup(buttons)
